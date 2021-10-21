@@ -12,30 +12,17 @@ class List extends React.Component<Props, State> {
     loading: true
   }
 
-  constructor (props: Props) {
-    super(props)
-
-    this.renderItem = this.renderItem.bind(this);
-
-    makeObservable(this, {
-      isAuthor: computed
-    })
-  }
-
   async componentDidMount () {
     this.setState({ loading: false })
   }
 
-  renderItem: Function;
-
-
-  renderItem(item: ItemModel) {
+  renderItem = async (item: ItemModel) => {
     return (
       <li key={item.id}>
         { /**/ }
       </li>
     )
-  }
+  };
 
   render () {
     return (

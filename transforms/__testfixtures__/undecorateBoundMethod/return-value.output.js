@@ -2,7 +2,7 @@
 import * as React from 'react'
 
 class List extends React.Component {
-  renderItem = (item: ItemModel) => {
+  renderItem = (item: ItemModel): Form => {
     return (
       <li key={item.id}>
         { /**/ }

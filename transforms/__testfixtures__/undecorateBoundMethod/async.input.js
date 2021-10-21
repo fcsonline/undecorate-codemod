@@ -1,18 +1,14 @@
 // @flow
 import * as React from 'react'
+import boundMethod from 'autobind-decorator'
 
-type CustomProps = {}
+type Props = {}
 
 type State = {
   loading: boolean
 }
 
-class List extends React.Component<CustomProps, State> {
-  constructor(props: CustomProps) {
-    super(props)
-    this.renderItem = this.renderItem.bind(this);
-  }
-
+class List extends React.Component<Props, State> {
   state = {
     loading: true
   }
@@ -21,10 +17,8 @@ class List extends React.Component<CustomProps, State> {
     this.setState({ loading: false })
   }
 
-  renderItem: Function;
-
-
-  renderItem(item: ItemModel) {
+  @boundMethod
+  async renderItem(item: ItemModel) {
     return (
       <li key={item.id}>
         { /**/ }

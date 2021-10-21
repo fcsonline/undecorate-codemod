@@ -4,9 +4,8 @@ const tests = [
   'simple-case',
   'unrelated-decorator',
   'mixed-decorators',
-  'without-constructor',
-  'with-constructor',
-  'with-custom-props',
+  'return-value',
+  'async',
 ];
 
 tests.forEach(test => {
